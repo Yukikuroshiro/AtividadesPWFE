@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 30px;
+        }
+        
+        textarea {
+            resize: none;
+        }
+        
+        .exercicios {
+            margin-left: auto;
+            margin-right: auto;
+            width: 1200px;
+            height: 300px;
+            border: 3px solid black;
+            margin-bottom: 30px;
+        }
+        
+        #resultado {
+            border: 3px solid black;
+            width: 300px;
+            height: 100px;
+        }
+        
+        #resultadoExercicio2 {
+            border: 3px solid black;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- EXERCICIO 1 -->
+    <div class="exercicios">
+        <label>
+            <h1>Exercício 1</h1>
+        </label>
+        <label>
+            Numero: <input type="text" id="numero" value="">
+        </label>
+        <button id="calcular">Calcular</button>
+        <div id="resultado"></div>
+    </div>
+    <!-- EXERCICIO 2 -->
+    <div class="exercicios">
+        <label>
+            <h1>Exercício 2</h1>
+        </label>
+        <label>
+            Numero 1: <input type="text" id="exercicio2Numero1" value="">
+        </label>
+        <label>
+            Numero 2: <input type="text" id="exercicio2Numero2" value="">
+        </label>
+        <label>
+            <button id="exercicio2Calcular">Calcular</button>
+        </label>
+        <div id="resultadoExercicio2"></div>
+    </div>
+    <script src="./atividades.js"></script>
+</body>
+
+</html>
