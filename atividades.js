@@ -37,3 +37,41 @@ const resolverExercicio02 = () => {
 calcular2.addEventListener('click', resolverExercicio02);
 
 // EXERCICIO 3
+const nome = document.querySelector('#nome');
+const sp = document.querySelector('#sp');
+const rj = document.querySelector('#rj');
+const es = document.querySelector('#es');
+const mg = document.querySelector('#mg');
+const button = document.querySelector('#exercicio3Button');
+const resultado3 = document.querySelector('#resultadoExercicio3');
+
+const estadoChecked = (sp, rj, es, mg) => {
+    estado = null;
+    if (sp.checked) {
+        estado = "SP";
+        return estado;
+    }
+    if (rj.checked) {
+        estado = "RJ";
+        return estado;
+    }
+    if (es.checked) {
+        estado = "ES";
+        return estado;
+    }
+    if (mg.checked) {
+        estado = "MG";
+        return estado;
+    }
+}
+
+const mensagemFuncao = (nome) => {
+    const mensagem = nome + " mora no estado de " + estadoChecked(sp, rj, es, mg);
+    return mensagem;
+}
+
+const resolverExercicio03 = () => {
+    resultado3.innerHTML = mensagemFuncao(nome.value);
+}
+
+button.addEventListener('click', resolverExercicio03);
