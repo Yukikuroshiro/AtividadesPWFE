@@ -75,3 +75,41 @@ const resolverExercicio03 = () => {
 }
 
 button.addEventListener('click', resolverExercicio03);
+
+// EXERCICIO 4
+const nome2 = document.querySelector('#nome2');
+const button2 = document.querySelector('#botao4');
+const front = document.querySelector('#front');
+const back = document.querySelector('#back');
+const web = document.querySelector('#web');
+const banco = document.querySelector('#banco');
+const moveis = document.querySelector('#movel');
+const resultado4 = document.querySelector('#resultado4');
+
+const areasPreferenciais = (front, back, web, banco, moveis) => {
+    let frontChecked = "";
+    let backChecked = "";
+    let webChecked = "";
+    let bancoChecked = "";
+    let moveisChecked = "";
+
+    // Ternários
+    frontChecked = front.checked ? frontChecked = "Front-end, " : frontChecked = "";
+    backChecked = back.checked ? backChecked = "Back-end, " : backChecked = "";
+    webChecked = web.checked ? webChecked = "Web-design, " : webChecked = "";
+    bancoChecked = banco.checked ? bancoChecked = "Banco de dados, " : bancoChecked = "";
+    moveisChecked = moveis.checked ? moveisChecked = "Programação móvel, " : moveisChecked = "";
+
+    const area = frontChecked + backChecked + webChecked + bancoChecked + moveisChecked;
+    return area;
+}
+const mensagemAreas = (nome) => {
+    mensagem = areasPreferenciais(front, back, web, banco, moveis) + "são áreas de prefência de " + nome.value;
+    return mensagem;
+}
+
+const resolverExercicio04 = () => {
+    resultado4.innerHTML = mensagemAreas(nome2);
+}
+
+button2.addEventListener('click', resolverExercicio04);
